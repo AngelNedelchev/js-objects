@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>js-objects</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="main">
+    </div>
+<div id="pic-wrapper">
+    <div id="x">      
+    </div>
+    <div id="y">
+    </div>
+    <div id="z">
+    </div>
+</div>
+    <script>
+        //exercise 1 
+        let person = new Object()
+
+        person.name = "Angel";
+        person.age = 22;
+        person.gender = "Male";
+        person.favoriteFood = "Pizza";
+        person.favoriteSeries = "TWD";
+        person.favoriteMovies = "Undisputed III";
+        person.single = "IAR"
+
+        //exercise 2
+        function FamilyMember(name, age, gender, favoriteFood, favoriteSeries, favoriteMovies, single){
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
+        this.favoriteFood = favoriteFood;
+        this.favoriteSeries = favoriteSeries;
+        this.favoriteMovies = favoriteMovies;
+        this.single = single;
+}
+
+let Father = new FamilyMember ("Denis", 42, "Male", "Pasta", "IDK", "Transporter", "single");
+let Mother = new FamilyMember ("Rosina", 41, "Female", "Pizza", "Prison Break", "Unknown", "IAR");
+let Sister = new FamilyMember ("Michelle", 14, "Female", "Taco's", "Unknown", "Unknown", "single");
+
+console.log(Father, Mother, Sister);    
+
+
+//exercise 3
+
+//Father
+var img = document.createElement("img");
+img.src = "img/img1.jpg";
+var src = document.getElementById("x");
+src.appendChild(img);
+
+var button1 = document.createElement("button");
+button1.innerHTML = "Father";
+
+var main = document.getElementById("main");
+main.appendChild(button1);
+
+button1.addEventListener ("click", function() {
+var el = document.getElementById('x');
+if (el.style.display == 'block') {
+  el.style.display = 'none';
+}
+else{
+  el.style.display = 'block';
+}
+});
+document.getElementById('x').style.display = "none";
+
+//Mother
+var img = document.createElement("img");
+img.src = "img/img2.jpg";
+var src = document.getElementById("y");
+src.appendChild(img);
+
+var button2 = document.createElement("button");
+button2.innerHTML = "Mother";
+
+var main = document.getElementById("main");
+main.appendChild(button2);
+
+button2.addEventListener ("click", function() {
+var el = document.getElementById('y');
+if (el.style.display == 'block') {
+  el.style.display = 'none';
+}
+else{
+  el.style.display = 'block';
+}
+});
+document.getElementById('y').style.display = "none";
+//Sister
+var img = document.createElement("img");
+ 
+img.src = "img/img3.jpg";
+var src = document.getElementById("z");
+ 
+src.appendChild(img);
+
+var button3 = document.createElement("button");
+button3.innerHTML = "Sister";
+
+var main = document.getElementById("main");
+main.appendChild(button3);
+
+button3.addEventListener ("click", function() {
+    
+
+var el = document.getElementById('z');
+if (el.style.display == 'block') {
+  el.style.display = 'none';
+}
+else{
+  el.style.display = 'block';
+}
+
+});
+document.getElementById('z').style.display = "none";
+//exercise 4
+//picture Father
+
+
+
+//picture Sister
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
